@@ -6,8 +6,6 @@ pipeline {
         stage('Install dependency')
         {
             steps{
-             sh 'ls'
-             sh 'pwd'
              echo "Installing packages"
              sh 'yarn install'
              }          
@@ -16,7 +14,7 @@ pipeline {
         stage('yarn build') 
         {
             steps{
-             sh "yarn export "
+             sh "yarn next build && yarn next export "
              sh 'ls -la ./out'
              }
         } 
