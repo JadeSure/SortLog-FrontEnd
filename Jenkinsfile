@@ -7,14 +7,14 @@ pipeline {
         {
             steps{
              echo "Installing packages"
-             sh 'yarn install'
+             sh 'yarn install --force'
              }          
         }
 
         stage('yarn build') 
         {
             steps{
-             sh "yarn next build && yarn next export "
+             sh "yarn export"
              sh 'ls -la ./out'
              }
         } 
