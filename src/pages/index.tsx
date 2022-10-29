@@ -32,7 +32,7 @@ const Index: NextPage = () => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Oldiron666
+          R U OK? Hello mi fans
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
