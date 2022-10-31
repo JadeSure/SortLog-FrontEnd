@@ -15,8 +15,9 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     permissions:
-      actions: read
-      contents: read
+#       actions: read
+#       contents: read
+      # required for all workflows
       security-events: write
 
     strategy:
