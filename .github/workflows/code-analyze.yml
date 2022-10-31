@@ -9,7 +9,7 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    - cron: '30 9 * * *'
+    - cron: '30 20 * * *'
 
 jobs:
   analyze:
