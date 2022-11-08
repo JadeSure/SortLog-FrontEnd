@@ -32,7 +32,7 @@ pipeline {
             when { anyOf { branch 'master'; branch 'dev' } }
             steps {
                 withAWS(credentials: AWS_CRED, region: AWS_REGION){ 
-                {
+                
                     echo "deploying to S3 "
                     sh '''
                         yarn install --force
@@ -41,9 +41,9 @@ pipeline {
                     
                     '''
                         // aws cloudfront create-invalidation --distribution-id $BLOG_CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
-                    }
-             }
-        }
+                }
+             
+            }
          
         }
 
