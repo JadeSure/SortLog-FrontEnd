@@ -29,9 +29,9 @@ pipeline {
                 withAWS(credentials: AWS_CRED, region: AWS_REGION)
                { dir('./out') 
                 {
-                    echo "deploy to S3 "
+                    echo "deploying to S3 "
                     sh '''
-                    aws s3 sync . s3://sortlog-frontend
+                    aws s3 sync --delete . s3://oldiron666.sortlog
                     '''}
              }
             }
