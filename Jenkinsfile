@@ -29,7 +29,7 @@ pipeline {
         // } 
 
         stage('upload frontend to  S3 bucket') {
-            when { anyOf { branch 'master'; branch 'dev' } }
+            when { anyOf { branch 'main'; branch 'dev' } }
             steps {
                 withAWS(credentials: AWS_CRED, region: AWS_REGION){ 
                 
