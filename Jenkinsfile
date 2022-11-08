@@ -8,6 +8,7 @@ pipeline {
     }
         
     stages{
+        when { anyOf { branch 'master'; branch 'dev' } }
         stage('Install dependency')
         {
             steps{
